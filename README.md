@@ -1,45 +1,83 @@
-# Catedra2_movil
-Estudiante Nicolas Henriquez Pedraza 202135919
+# Cátedra2 Móvil
 
+## Estudiante
+Nicolas Henriquez Pedraza  
+Código: 202135919
 
-## COnfiguracion general
+## Configuración General
 
+### Clonar Repositorio
+```bash
 git clone https://github.com/Bharragan/catedra2_movil.git
-
 cd catedra2_movil
-
 cd backend
+```
 
-## Backend
-Para poder usar el proyecto de backen es necesario tener nstalado express y nodejs.
+Backend
 
-### Instalacion de dependencia
+Para utilizar el proyecto backend, es necesario tener instalado Node.js y Express.
+Instalación de Dependencias
 
-Una vez en backend usar:
+Dentro del directorio backend, ejecuta:
+
+```bash
 npm install
+```
+Configuración
 
-### Carga de configuraciones
-Para poder usar el backend es necesario crear un archivo .env en la carpeta backend con lo siguiente
-    
-    PORT=5000
-    MONGODB_URI="tu_url_de_mongo"
-### Ejecucion
-Ejecuta npm start para prender el servidor
+Crea un archivo .env en la carpeta backend con la siguiente configuración:
 
-## FRONTEND
+.env
+```
+PORT=5000
+MONGODB_URI="tu_url_de_mongo"
+```
+Asegúrate de reemplazar "tu_url_de_mongo" con la URL de tu base de datos MongoDB.
 
-en la raiz 
-Cd frontend
-cd catedra2
+Ejecución
 
+Para iniciar el servidor, ejecuta:
+
+```bash
+npm start
+```
+Esto pondrá en marcha el servidor y podrás comenzar a utilizar el backend.
+
+# Frontend - Cátedra 2
+
+Este proyecto representa el frontend de la aplicación Cátedra 2.
+
+## Configuración inicial
+
+1. Navega a la carpeta del frontend:
+
+```bash
+cd frontend/catedra2
+```
+
+Instala las dependencias necesarias con npm:
+```bash
 npm install
+ ```
 
-crear el archivo.env como:
+Crea un archivo .env en la raíz del directorio catedra2 con la siguiente configuración:
+
+.env
+
     REACT_APP_API_URL = "http://localhost:5000"
 
-una vez listo usar npm start
+    Asegúrate de ajustar la URL según la configuración de tu backend.
 
-IMPORTANTE TENER EL BACKEND PRENDIDO
+Ejecutar la aplicación
 
-## Postman
-Se adjunta colleccion de postman para testo
+Una vez que hayas completado la configuración inicial, puedes iniciar la aplicación con el siguiente comando:
+
+ ```bash
+npm start
+ ```
+Esto iniciará la aplicación en modo de desarrollo y podrás verla en tu navegador.
+
+IMPORTANTE: Asegúrate de que el backend esté en ejecución antes de iniciar el frontend.
+Postman
+
+Se adjunta una colección de Postman para realizar pruebas. Puedes importar la colección en Postman y utilizarla para probar las diferentes funcionalidades de la API.
