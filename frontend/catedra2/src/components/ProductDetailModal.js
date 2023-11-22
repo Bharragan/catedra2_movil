@@ -13,7 +13,11 @@ function ProductDetailModal({ isOpen, onClose, product }) {
         <p><strong>Name:</strong> {product.name}</p>
         <p><strong>Price:</strong> {product.price}</p>
         <p><strong>Description:</strong> {product.description}</p>
-        <img src={product.image} alt={product.name} />
+        <img
+          src={product.image}
+          alt={product.name}
+          style={{ width: '200px', height: '200px' }} // Fija el tamaño de la imagen a 200x200 píxeles
+        />
       </div>
     </div>
   );
