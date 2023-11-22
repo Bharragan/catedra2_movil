@@ -5,7 +5,7 @@ function ProductModal({ isOpen, onClose, onSave, productToEdit }) {
     name: productToEdit ? productToEdit.name : '',
     price: productToEdit ? productToEdit.price : 0,
     description: productToEdit ? productToEdit.description : '',
-    image: productToEdit ? productToEdit.image : '', // Agrega el campo 'image' con la URL del producto editado
+    image: productToEdit ? productToEdit.image : '',
   });
 
   const handleInputChange = (e) => {
@@ -24,6 +24,7 @@ function ProductModal({ isOpen, onClose, onSave, productToEdit }) {
 
   return (
     <div className={`modal ${isOpen ? 'open' : ''}`}>
+      <div className="modal-overlay" onClick={onClose}></div>
       <div className="modal-content">
         <span className="close" onClick={onClose}>&times;</span>
         <h2>{productToEdit ? 'Editar Producto' : 'Crear Producto'}</h2>
