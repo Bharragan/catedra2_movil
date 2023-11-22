@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import ProductTable from "./ProductTable";
 import ProductModal from "./ProductModal";
 import ProductDetailModal from "./ProductDetailModal"; // Nuevo componente para mostrar detalles
+import Header from "./Header";
 
 function ProductManagement() {
   const [products, setProducts] = useState([]);
@@ -128,20 +129,14 @@ function ProductManagement() {
 
   return (
     <div>
-      {isLoading && <p>Cargando productos...</p>}
+      <Header /> {/* Agrega el componente Header aquí */}
       {error && <p>Error: {error}</p>}
-
-      <button onClick={handleCreateProduct} className="btn btn-primary">
-        Crear Producto
-      </button>
-
       <ProductTable
         products={products}
         onViewProduct={handleViewProduct}
         onEditProduct={handleEditProduct}
         onDeleteProduct={handleDeleteProduct}
       />
-
       {isModalOpen && (
         <ProductModal
           isOpen={isModalOpen}
@@ -150,7 +145,6 @@ function ProductManagement() {
           productToEdit={selectedProduct}
         />
       )}
-
       {isDetailModalOpen && (
         <ProductDetailModal
           isOpen={isDetailModalOpen}
@@ -158,6 +152,9 @@ function ProductManagement() {
           product={selectedProduct}
         />
       )}
+      <button onClick={handleCreateProduct} className="btn btn-primary">
+        Crear Producto
+      </button>
     </div>
   );
 }
